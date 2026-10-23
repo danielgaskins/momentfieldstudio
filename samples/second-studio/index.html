@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111c1b">
+  <meta name="description" content="Three sample short-form edits from The Second Studio's conversation with Harper Halprin, prepared by Momentfield Studio.">
+  <title>For The Second Studio · Momentfield Studio</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="./samples.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to samples</a>
+  <header class="sample-header">
+    <div class="wrap sample-header-inner">
+      <a class="brand" href="/" aria-label="Momentfield Studio home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>momentfield<span class="brand-period">.</span></span></a>
+      <a class="sample-contact" href="mailto:hello@momentfieldstudio.com?subject=The%20Second%20Studio%20sample%20edits">Say hello <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="sample-intro wrap">
+      <p class="eyebrow"><span class="eyebrow-line"></span> PREPARED FOR THE SECOND STUDIO</p>
+      <h1>One conversation.<br><em>Three moments worth sharing.</em></h1>
+      <div class="intro-bottom">
+        <p>David &amp; Marina — I picked three ideas from your conversation with Harper Halprin and shaped them into vertical clips. Here’s a look at what Momentfield Studio could bring to your episodes.</p>
+        <a class="source-link" href="https://www.secondstudiopod.com/podcast-19/522-harper-halprin-aaha">From episode #522<br><span>Harper Halprin · AAHA Studio ↗</span></a>
+      </div>
+    </section>
+    <section class="sample-work wrap" aria-labelledby="work-heading">
+      <div class="work-label"><h2 id="work-heading">The sample edits</h2><span>CAPTIONED · VERTICAL · READY TO REVIEW</span></div>
+      <div class="sample-grid">
+        <article class="sample-card">
+          <div class="clip-label"><span>01 / CAREER</span><span>35 SEC</span></div>
+          <video controls playsinline preload="none" poster="./media/first-jobs.jpg" aria-label="Your first jobs shape your career, featuring Harper Halprin">
+            <source src="./media/first-jobs.mp4" type="video/mp4">
+            <p><a href="./media/first-jobs.mp4">Watch the career clip</a>.</p>
+          </video>
+          <div class="sample-description"><h3>Your first jobs shape your career.</h3><p>A clear lesson for emerging architects: explore early, before specialization makes a pivot harder.</p><details><summary>Read transcript</summary><p class="transcript" data-transcript="first-jobs.transcript.txt"></p></details></div>
+        </article>
+        <article class="sample-card">
+          <div class="clip-label"><span>02 / CLIENT EDUCATION</span><span>45 SEC</span></div>
+          <video controls playsinline preload="none" poster="./media/architect-vs-draftsman.jpg" aria-label="Architect versus draftsman, featuring Harper Halprin">
+            <source src="./media/architect-vs-draftsman.mp4" type="video/mp4">
+            <p><a href="./media/architect-vs-draftsman.mp4">Watch the client education clip</a>.</p>
+          </video>
+          <div class="sample-description"><h3>Different services. Different expectations.</h3><p>The fast-food and fine-dining analogy makes an unfamiliar service distinction easy to understand.</p><details><summary>Read transcript</summary><p class="transcript" data-transcript="architect-vs-draftsman.transcript.txt"></p></details></div>
+        </article>
+        <article class="sample-card">
+          <div class="clip-label"><span>03 / STUDIO PHILOSOPHY</span><span>38 SEC</span></div>
+          <video id="process-clip" controls playsinline loop preload="none" poster="./media/flexible-style-disciplined-process.jpg" aria-label="Flexible style, disciplined process, featuring Harper Halprin">
+            <source src="./media/flexible-style-disciplined-process.mp4" type="video/mp4">
+            <p><a href="./media/flexible-style-disciplined-process.mp4">Watch the studio philosophy clip</a>.</p>
+          </video>
+          <div class="sample-description"><h3>Flexible style. Disciplined process.</h3><p>A studio’s identity can live in its process. The final phrase leads naturally back into the opening.</p><label class="loop-option"><input type="checkbox" id="repeat" checked> Repeat this clip</label><details><summary>Read transcript</summary><p class="transcript" data-transcript="flexible-style-disciplined-process.transcript.txt"></p></details></div>
+        </article>
+      </div>
+      <p class="sample-credit">Independent sample edits from The Second Studio #522, featuring Harper Halprin. Original conversation by The Second Studio. These samples demonstrate an editing direction; they do not imply a client relationship or endorsement.</p>
+    </section>
+    <section class="sample-next">
+      <div class="wrap next-inner">
+        <div><p class="section-index">A SIMPLE NEXT STEP</p><h2>Let’s shape the next episode.</h2><p>If this feels like the right direction, we can start with one episode and tailor the topics, pacing, and visual style to your show.</p></div>
+        <a class="button button-primary" href="mailto:hello@momentfieldstudio.com?subject=The%20Second%20Studio%20sample%20edits">Talk with Daniel <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="sample-footer wrap"><span>Daniel · Momentfield Studio</span><a href="mailto:hello@momentfieldstudio.com">hello@momentfieldstudio.com</a></footer>
+  <script>
+    const videos = [...document.querySelectorAll('video')];
+    videos.forEach(video => video.addEventListener('play', () => videos.forEach(other => { if (other !== video) other.pause(); })));
+    document.querySelector('#repeat').addEventListener('change', event => { document.querySelector('#process-clip').loop = event.target.checked; });
+    document.querySelectorAll('details').forEach(details => details.addEventListener('toggle', async () => {
+      const target = details.querySelector('[data-transcript]');
+      if (!details.open || target.textContent) return;
+      try { const response = await fetch(target.dataset.transcript); if (!response.ok) throw new Error('Unavailable'); target.textContent = await response.text(); }
+      catch { target.textContent = 'Transcript unavailable. The video includes captions.'; }
+    }));
+  </script>
+</body>
+</html>

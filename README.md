@@ -2,6 +2,12 @@
 
 Static landing page hosted with GitHub Pages at `momentfieldstudio.com`. `index.html`, `styles.css`, and `favicon.svg` are the deployable files. `.nojekyll` keeps Pages from running Jekyll. Push changes to `main` to deploy.
 
+Creator-specific sample pages live under `samples/`. The Second Studio page is
+`/samples/second-studio/`, with three unchanged v3 clip exports, poster frames,
+and text transcripts. It is labeled as independent sample work and uses
+`noindex,nofollow`; this is a public URL, not access-controlled hosting. It is
+shared directly rather than linked as a client case study on the homepage.
+
 Business contact: `hello@momentfieldstudio.com`. The mailbox is on Zoho Mail Free and was tested in both directions with the owner's Gmail account on 2026-10-20. Sign in through Zoho Mail with the linked Google account.
 
 The domain is registered at Cloudflare. Its DNS records include GitHub Pages A records, a `www` CNAME, Zoho MX records, and Zoho verification, SPF, DKIM, and DMARC TXT records. Keep the GitHub Pages records set to **DNS only**. Cloudflare domain renewal is annual; review the current renewal price in Cloudflare before the next charge.
